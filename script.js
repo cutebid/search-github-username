@@ -29,7 +29,7 @@ let showUserName = (e) => {
                 <span> Joined 25 Jan 2011 </span>
               </div>
             
-              <p class="search-result-right-profile">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quae exercitationem. Eius ipsam totam mollitia quos magnam, at, quidem accusantium, rerum perferendis quo id animi illum quam nostrum. Eum, id?</p>
+              <p class="search-result-right-profile"> This profile has no bio </p>
               <div class="search-result-right-info">
                 <div class="search-result-right-info-item">
                   <p> Repos </p>
