@@ -13,7 +13,8 @@ let showUserName = (e) => {
   fetch(`https://api.github.com/users/${inputValue}`)
     .then((response) => response.json())
     .then((user) => {
-      if(user){
+      console.log(user)
+      if(user.login){
             html += `
                <div class="search-result">
             <div class="search-result-left">
@@ -115,7 +116,7 @@ let showUserName = (e) => {
             `;
             searchResult.innerHTML = html;
       }else{
-         searchResult.innerHTML = 'no result'
+         document.querySelector('.no-result').innerHTML = 'no results'
       }
      
     });
