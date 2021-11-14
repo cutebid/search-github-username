@@ -13,7 +13,6 @@ let showUserName = (e) => {
   fetch(`https://api.github.com/users/${inputValue}`)
     .then((response) => response.json())
     .then((user) => {
-      console.log(user)
       if(user.login){
             html += `
                <div class="search-result">
@@ -27,7 +26,7 @@ let showUserName = (e) => {
                     <a target= '_blank' href="https://github.com/${user.login}"> @${user.login} </a>
                 </div>
                 
-                <span> Joined 25 Jan 2011 </span>
+                <span> joined ${user.created_at} </span>
               </div>
             
               <p class="search-result-right-profile"> This profile has no bio </p>
@@ -116,7 +115,8 @@ let showUserName = (e) => {
             `;
             searchResult.innerHTML = html;
       }else{
-         document.querySelector('.no-result').innerHTML = 'no results'
+         document.querySelector('.no-result').innerHTML = 'no results';
+         searchResult.innerHTML = ''
       }
      
     });
@@ -134,3 +134,5 @@ toggleImage.addEventListener("click", () => {
     text.innerHTML = "Light";
   }
 });
+// var ts = new Date();
+// console.log(ts.toDateString())
